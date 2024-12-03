@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University</title>
+    <link rel="icon" type="image/x-icon" href="assets/Images/logo23.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="boxicons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="d-flex justify-content-between  ">
+
+        <div class="col-lg-2  col-6  d-flex justify-content-end  align-items-center ">
+            <img src="assets/Images/favicon3.png" alt="..." height="17px" style="margin-right: 35px;">
+        </div>
+        <div class="col-lg-7  justify-content-center  align-items-center nav-links  " style="gap: 40px;">
+           <a href="#">Home</a>
+           <a href="#">About</a>
+           <a href="#">Contact</a>
+           <a href="#">Sign Up</a>
+        </div>
+        <div class="col-lg-2 col-6 icons-div  d-flex justify-content-start  align-items-center gap-4">
+             <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA2RJREFUWEftl23I31MYx7+f88NKIe/sgclDWyPyZmnz4m5qHqK8QOSxNrxRo5Y76k5pediSO6FlmilSKIVYydgLllfU1Ex7ENFCUbKxnN9X53+fbv9Hv9/Z7t1t5Xp7rut7Pr/rnOs61w8dZ8ZxxqMTE8j2CtX1SsHlks6TdJakA5L2yd6hELYC22ci2/+ZIduXyn5e0vIWm30kuB/4uoXvSJeRQLbvkL1J0pyCDQ4JbgbeK4jpcR0KZPtG2W92ef4te6NC+FjSbkn789EtVl2vENwrqZr2h5XAh0cCNQBke6HsnZJOy4J7BdcC34zawPbFsj+QtCD7/CxYAvxSCjUIVNdvS7ohC+0WXNFG2PYC2Z9JOrsTa79IVd13VEC2l8r+PIscFiwCvm0rmovgC6nTTiy4ANjXNj759WTIMU4K1uQvnKSqHiwR6yQmxtcFt3Ti4CFgQ4lGL1Bdp5JdlMWWATtKxKZOyjfJfiPHbSOEK0s0+oF+k3RGBjod+L1ELAOdKztVYbLvCGFhiUY/0GFJJ2egk4BYIpaB5sj+M8cdIoRTSzT6gX6UNDcDzQXS81BktufJ/iEH7SSES0oE+oE+lbQsA10DbC0Ryxm6XvY7nTj7Narq9hKNXiB7QvZjWewlquqeErEOQ4yvCm7LHzUOrC/R6AdaLHtXFqhzt01PRSvLfejL7PyX4ELg+1bB2WmwU8f4iuDOvL5HsBz4qUnU9jm5U8/PGV5HVU00xfWvD3vL0qX8StKZ2Xm/4OqGt+wy2e/nOSmFHRCcDxw8aqB8Ma+T/W6XWHrtX1AIn3S99qmBLlFdjwlW93X9twR3A3/MCFCGulX2FkmnFIim/pPuUJosfxVMSnoWSA23lTVNjBfJfk7SWAu1bYJUlSmbe6YbrHRQ8BQwVb0N1mrIzzP1VV0z9TxJQWkzabvgZWB6oHOMGwW9owdMAOtmBKhJpH89V1waO/6dIpMTPNqUqVYZKgXq3MEYHxc8PBBrr6eqxkdpHjsgG9X1JsGqIVBbFMIqoG7sQ0eSjVExtoPqerPgriFQmxXCasDda8csQ92bOMZnBA8MQE39MnX/3czer7Rj3CBYOw1lP0FVPTKrRzZQfTE+KRhPYMDTw456Vo6s5/jsMSA9QUNt1oGaiuZ/oBMuQ/8Ah3xQNE5ojAkAAAAASUVORK5CYII="
+                height="17px" onclick="searchIcon()" />
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAc5JREFUWEftlz1oFUEUhc+3a2NnJQSsxCpBiJViLZYSwdLCIqhgJwr+BE0EDfjTCYohRSobES3FLtjYCSrPRtKEFDZJLcweSRjDw7x9s/OyQgg75dyz935z5u4wg/bYYI/xaP8A2Z5QVV0WTEqaiE5/k/1FRfES+DGK+yM55BAeCGakWoeD4DbwJBcqG8ghPBdca1TInqMsZxtpoygLyPa07IW+AsuCO5K+x7njsh9LOrWtgSngfVOoxkC2S9lrkg5vJbdfqyguAlV/sah7K+lcnO9RFOP/A+iM7I8x8YbgKLA+qJDtMdk/JR3cisM40GsClePQddnPYtJ3FMX5YQVcVR8knY1Al4CltoHuyZ6L2/WIsrw7FCiEecGtCDQDPGwXKIRZwf0IlPx7nKn/C7tjy2wfkf1G0skmK9qF5rPgArDan2MQ0A3Z2QfaSGBwE3g6HKjf6pGqZHw04ODc6VDN3uf2RJ0+lacDas2hjM4YKu2AUk52DnUOpRxIxbse6hxKOZCK74Mesq/KfpFaaStxuAK8St0YN6+wXyUdaqVofZJfghPA5ltvewx8Btk+JntR0mlJB1oG+y3pk2AaWPk3d+N3WctQtek6oJTTfwAE65Y00iOMMwAAAABJRU5ErkJggg=="
+                height="17px" onclick="cartIcon()" /> -->
+            <div> <i class="bx bx-menu-alt-right" onclick="openNav()"></i></div> 
+
+
+        </div>
+        <div class="res-nav">
+            <i class="bx bx-x" onclick="navClose()"></i>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="">Sign Up</a>
+
+        </div>
+        <!-- <div class="sub-menu d-flex justify-content-center ">
+            <div class="col-lg-3">
+                <ul id="first_col">
+
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <ul id="sec_col">
+
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <ul id="third_col">
+
+                </ul>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+        <div class="sub-menu-2 d-flex flex-wrap">
+            <div class="col-lg-1 ">
+
+            </div>
+            <div class="col-lg-11" style="padding-top: 70px ;padding-left: 30px;">
+                <div>
+                    <i class='bx bx-search-alt'></i>
+                    <input type="text" name="" id="search-input" placeholder="Search apple.com">
+                    <i class='bx bxs-x-circle' onclick="rubSearch()"></i>
+                </div>
+                <div>
+                    <p>Quick Links</p>
+                    <ul class="recent-search " >
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="sub-menu-3 d-flex flex-wrap" id="sub-menu-3">
+<div class="col-lg-1"></div>
+<div class="col-lg-11 mt-5">
+<h2>Your Bag is empty.</h2>
+<p><a href="">Sign in</a> to see if you have any saved items</p>
+<div style="position: relative; top: 20px;left: -15px;">
+<span>My Profile</span>
+<ul>
+    <li><i class='bx bx-right-arrow-alt'></i> Orders</li>
+    <li><i class='bx bx-right-arrow-alt'></i> Your Saves</li>
+    <li><i class='bx bx-right-arrow-alt'></i> Account</li>
+    <li><i class='bx bx-right-arrow-alt'></i> Sign in</li>
+</ul>
+</div>
+</div>
+        </div> -->
+
+
+    </header>
+    <main>
+        <!-- section 1 starts -->
+        <section id="section-1"
+            class=" container-fluid section-1 ">
+            <div class="container">
+                <h2>Your Companion Through University
+                </h2>
+                <p>Discover a platform that simplifies, enriches and supports your student life - from exclusive offers to personal development.</p>
+          <div class="btn-group">
+            <button>Register Now</button>
+            <button>Learn More</button>
+          </div>
+          
+            </div>
+
+
+        </section>
+        <!-- section-1 end -->
+
+
+        <!-- section-2 starts -->
+        <section class="container-fluid section-2 d-flex justify-content-center ">
+            <div class=" container">
+                <h2>Customised framework contracts for students</h2>
+                <div class="Contracts-for-students">
+                    <div>
+                        <h3>Insurance</h3>
+                        <p>Discover insurance packages specially 
+                            tailored for students. From affordable 
+                            health insurance with additional 
+                            benefits for semesters abroad to 
+                            reasonably priced liability and disability 
+                            insurance - we offer you comprehensive 
+                            protection at student rates.</p>
+                    </div>
+                    <div>
+                        <h3>Technology and electronics</h3>
+                        <p>Benefit from exclusive discounts on 
+                            laptops, tablets and smartphones from 
+                            top brands like Dell, Lenovo and 
+                            Samsung. In addition, you will receive 
+                            discounts on essential accessories and 
+                            important educational software such as 
+                            Microsoft Office and Adobe Creative 
+                            Cloud.</p>
+                    </div>
+                    <div>
+                        <h3>Mobile and internet</h3>
+                        <p>Enjoy flexible, monthly cancellable 
+                            tariffs with extra data volume, specially 
+                            tailored to your needs as a student. Our 
+                            combination packages of internet and 
+                            mobile are optimally aligned with your 
+                            student life.
+                            </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- section-2 ends -->
+
+        <!-- section-3-starts -->
+
+        <section class="container-fluid  section-3  ">
+            <div class="container d-flex justify-content-between">
+                <div class="part-1">
+                    <img src="assets/Images/Your-Companion-Through-University_page-0003.jpg" alt="not">
+                </div>
+                <div class="part-2">
+                    <h2>Travel and Mobility for Global 
+                        Explorers</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                              <div class="number">1</div>
+                              <h4>Educational Trips</h4>
+                              <p>Broaden your horizons with our exclusive offers for cultural and academic trips. From fascinating excursions to intensive workshops abroad - we offer you unique opportunities to explore the world and gain valuable experiences.</p>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="number">2</div>
+                              <h4>Flexible Mobility</h4>
+                              <p>Thanks to our partnerships with renowned providers like Sixt, Europcar, and local car-sharing services, you enjoy affordable and flexible mobility. Whether for a day trip or a longer internship - we ensure that you remain mobile at all times.</p>
+                            </div>
+                            <div class="timeline-item">
+                              <div class="number">3</div>
+                              <h4>Easy Start to Accommodation</h4>
+                              <p>Moving into your first own flat or shared apartment becomes a breeze with our complete packages. From practical kitchen starter sets to sustainable furniture options - we support you in making your new home cozy and functional.</p>
+                            </div>
+                          </div>
+                </div>
+            </div>
+    
+
+        </section>
+
+        <!-- section-3 ends -->
+
+
+        <!-- section-4 starts -->
+        <section class="container-fluid section-4 d-flex flex-wrap justify-content-between  ">
+            <div class="container d-flex justify-content-between">
+                <div class="part-1">
+                    <h2 class="mb-5">Diverse Affiliate Programmes</h2>
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                          Technology and Electronics
+                        </div>
+                        <div class="accordion-content">
+                          Benefit from exclusive brand partnerships with HP, Dell, Bose, and Apple. Enjoy not only special discounts but also attractive cashback programmes when purchasing devices and accessories. This way, you can save on your tech investments and always stay up-to-date.
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-title">
+                          Insurance
+                        </div>
+                        <div class="accordion-content">
+                          Use our direct affiliate links to leading insurance providers who offer tailored policies for students. Compare and take out insurance directly through our platform - simple, transparent, and optimally suited to your needs.
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <div class="accordion-title">
+                          Leisure and Travel
+                        </div>
+                        <div class="accordion-content">
+                          Discover a world of special offers for theme parks, concert tickets, and events. Plan your next trip with our exclusive travel packages, which have been specially put together for students at affordable prices. Experience more without blowing your budget!
+                        </div>
+                      </div>
+                             </div>
+                             <div class="part-2">
+                    <img src="assets/Images/Your-Companion-Through-University_page-0004.jpg" alt="alt">
+                             </div>
+            </div>
+       
+
+        </section>
+        <!-- section-4-ends -->
+
+
+        <!-- sec-5-starts -->
+        <section class="container-fluid section-5 d-flex ">
+      <div class="container">
+        <h2>Personal Development through Workshops and 
+            Events</h2>
+            <div class="parent-box">
+                <div class="boxes">
+                    <h4>Career Development</h4>
+                    <p>Boost your career prospects with our practical workshops. 
+                        Learn how to write compelling applications, present
+                        yourself effectively in interviews, and network efficiently. 
+                        Benefit from the experiences of successful professionals 
+                        and prepare optimally for your career start.</p>
+                </div>
+                <div class="boxes">
+                    <h4>Mindset and Stress Management</h4>
+                    <p>Master the challenges of your studies with our workshops 
+                        on resilience, relaxation techniques, and time 
+                        management. Learn how to maintain balance even in 
+                        stressful exam periods and care for your mental health.
+                        </p>
+                </div>
+                <div class="boxes">
+                    <h4>Financial Education
+                    </h4>
+                    <p>Become a finance pro with our training on budgeting, tax 
+                        optimisation, and dealing with funding. Understand the 
+                        basics of financial independence and lay the foundation 
+                        for a secure financial future during your studies.
+                        </p>
+                </div>
+                <div class="boxes">
+                    <h4>Networking Events</h4>
+                    <p>Make valuable contacts at our exclusive meetings with 
+                        industry experts, alumni, and potential employers. Expand 
+                        your professional network and discover exciting career 
+                        opportunities in a relaxed atmosphere.</p>
+                </div>
+            </div>
+      </div>
+
+        </section>
+        <!-- sec - 5 -end  -->
+
+
+        <!-- sec-6- starts  -->
+
+
+        <section class="container-fluid section-6  ">
+        <div class="container d-flex justify-content-between">
+            <div class="part-1">
+<h2>AI Integration for a Smart 
+    Student Life</h2>
+    <div class="box-item">
+        <img src="assets/Images/brain-removebg-preview.png" alt="not found">
+        <h4>Personalised Recommendations
+        </h4>
+        <p>Our AI analyses your field of study, interests and past activities to suggest 
+            customised offers, workshops and content. This way, you'll find the exact 
+            support you need for your current stage of studies.
+            </p>
+    </div>
+    <div class="box-item">
+        <img src="assets/Images/calculator-removebg-preview.png" alt="not found">
+        <h4>Intelligent Budgeting
+        </h4>
+        <p>Our AI-powered budgeting tool helps you keep track of your monthly 
+            expenses and set realistic savings goals. Learn how to use your money 
+            wisely and stay financially independent even on a student budget.
+            
+            </p>
+    </div>
+    <div class="box-item">
+        <img src="assets/Images/bell-removebg-preview.png" alt="not found">
+        <h4>Smart Notifications
+        </h4>
+        <p>Never miss important deadlines or offers again. Our AI system reminds you 
+            in time of application deadlines, upcoming workshops or new discount 
+            campaigns that perfectly match your interests
+            </p>
+    </div>
+            </div>
+            <div class="part-2">
+                <img src="assets/Images/Your-Companion-Through-University_page-0006.jpg" alt="not found">
+            </div>
+        </div>
+
+        </section>
+<section class="container-fluid section-7">
+ 
+    <div class="container d-flex justify-content-between">
+        <div class="part-1">
+            <h2 class="mb-5">Gamification: Learning and 
+                Winning</h2>
+<div class="item-box">
+    <div>
+        <img src="assets/Images/Your-Companion-Through-University_page-0007__1_-removebg-preview.png" alt="not">
+    </div>
+    <div>
+        <h4>Collect Points</h4>
+        <p>Collect points for every activity on our platform. Whether 
+            you attend workshops, use exclusive offers or invite friends - 
+            every action will take you further. Watch your point balance 
+            grow and level up.
+            </p>
+    </div>
+</div>
+<div class="item-box">
+    <div>
+        <img src="assets/Images/Your-Companion-Through-University_page-0007__2_-removebg-preview (2).png" alt="not">
+    </div>
+    <div>
+        <h4>Master Challenges</h4>
+        <p>Take on exciting challenges that test and expand your skills. 
+            From learning sprints to creative projects - every challenge 
+            mastered will advance you not only in our game, but in your 
+            personal development as well.
+            </p>
+    </div>
+</div>
+<div class="item-box">
+    <div>
+        <img src="assets/Images/Your-Companion-Through-University_page-0007__3_-removebg-preview.png" alt="not">
+    </div>
+    <div>
+        <h4>Redeem Rewards
+        </h4>
+        <p>Exchange your hard-earned points for attractive rewards. 
+            Choose from exclusive discounts, access to VIP events or 
+            unique experiences. The more active you are, the greater the 
+            selection of exciting prizes waiting for you.
+            </p>
+    </div>
+</div>
+        </div>
+        <div class="part-2">
+            <img src="assets/Images/Your-Companion-Through-University_page-0007.jpg" alt="not">
+        </div>
+    </div>
+</section>
+<section class="container-fluid section-8">
+    <div class="container">
+        <h2 class="text-center">Your Path to Success - Simple, Flexible, Transparent</h2>
+        <div class="middle-box">
+            <table>
+                <thead>
+                    <th>Simplicity</th>
+                    <th>Flexibility</th>
+                    <th>Transparency</th>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Central dashboard for all information 
+                            and functions</td>
+                            <td>Offers and workshops tailored to your 
+                                schedule</td>
+                                <td>
+                                    Clear presentation of all terms and 
+costs
+                                </td>
+                    </tr>
+                    <tr>
+                        <td>Intuitive navigation through all 
+                            platform areas
+                            </td>
+                            <td>24/7 access to resources and support</td>
+                            <td>Detailed explanations of all offers and 
+                                services</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Quick access to personalised <br>
+recommendations
+                        </td>
+                        <td>
+                            Mobile optimisation for learning and 
+planning on the go
+                        </td>
+                        <td>
+                            Regular updates on changes and new 
+features
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+        <!-- sec 6 ends  -->
+
+        <!-- slider starts -->
+
+
+        <!-- end  -->
+
+        <!-- last section starts  -->
+
+   
+
+        <!-- all section ends -->
+    </main>
+    <footer>
+        <div class="resp-footer">
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Shop and Learn
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Store</a>
+                            <a>Mac</a>
+                            <a>iPad</a>
+                            <a>iPhone</a>
+                            <a>Watch</a>
+                            <a>Vision</a>
+                            <a>AirPods</a>
+                            <a>Tv & Home</a>
+                            <a>AirTag</a>
+                            <a>Accessories</a>
+                            <a>GIft Cards</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Apple Wallet
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Apple Wallet</a>
+                            <a>Wallet</a>
+                            <a>Apple Card</a>
+                            <a>Apple Pay</a>
+                            <a>Apple Cash</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Account
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Manage Your Apple ID</a>
+                            <a>Apple Store Account</a>
+                            <a>iCloud.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Entertainment
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Apple One</a>
+                            <a>Apple Tv+</a>
+                            <a>Apple Music</a>
+                            <a>Apple Arcade</a>
+                            <a>Apple Fitness+</a>
+                            <a>Apple News+</a>
+                            <a>Apple Podcasts</a>
+                            <a>Apple Books</a>
+                            <a>App Store</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Apple Store
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Find a Store</a>
+                            <a>Genius Bar</a>
+                            <a>Today at Apple</a>
+                            <a>Apple Camp</a>
+                            <a>Apple Store App</a>
+                            <a>Certificate Refurbished</a>
+                            <a>Apple Trade In</a>
+                            <a>Financing</a>
+                            <a>Carrier Deals at Apple</a>
+                            <a>Order Status</a>
+                            <a>Shopping Help</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            For Business
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Apple and Business</a>
+                            <a>Shop for Business</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            For Education
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Apple and Education</a>
+                            <a>Shop for K-12</a>
+                            <a>Shop for College</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            For Healthcare
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body"><a>Apple in Healthcare</a>
+                            <a>Health on Apple Watch</a>
+                            <a>Health Records on iPhone</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            For Government
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Shop For Government</a>
+                            <a>Shop for Veterans and Military</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Apple Values
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Accessibility</a>
+                            <a>Education</a>
+                            <a>Envivronment</a>
+                            <a>Inclusion and Diversity</a>
+                            <a>Privacy</a>
+                            <a>Racial Equality and Justice</a>
+                            <a>Supplier Responsibility</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            About Apple
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a>Newsroom</a>
+                            <a>Apple Leadership</a>
+                            <a>Career Opportunities</a>
+                            <a>Investor</a>
+                            <a>Ethics & Compaliance</a>
+                            <a>Events</a>
+                            <a>Contact Apple</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-main-contents">
+            <div class="column-1 columns">
+                <div>
+                    <ul>
+                        <li>Shop and Learn</li>
+                        <li>Store</li>
+                        <li>Mac</li>
+                        <li>iPad</li>
+                        <li>iPhone</li>
+                        <li>Watch</li>
+                        <li>Vision</li>
+                        <li>AirPods</li>
+                        <li>Tv & Home</li>
+                        <li>AirTag</li>
+                        <li>Accessories</li>
+                        <li>GIft Cards</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Apple Wallet</li>
+                        <li>Wallet</li>
+                        <li>Apple Card</li>
+                        <li>Apple Pay</li>
+                        <li>Apple Cash</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-2 columns">
+                <div>
+                    <ul>
+                        <li>Account</li>
+                        <li>Manage Your Apple ID</li>
+                        <li>Apple Store Account</li>
+                        <li>iCloud.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Entertainment</li>
+                        <li>Apple One</li>
+                        <li>Apple Tv+</li>
+                        <li>Apple Music</li>
+                        <li>Apple Arcade</li>
+                        <li>Apple Fitness+</li>
+                        <li>Apple News+</li>
+                        <li>Apple Podcasts</li>
+                        <li>Apple Books</li>
+                        <li>App Store</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="column-3 columns">
+                <div>
+                    <ul>
+                        <li>Apple Store</li>
+                        <li>Find a Store</li>
+                        <li>Genius Bar</li>
+                        <li>Today at Apple</li>
+                        <li>Apple Camp</li>
+                        <li>Apple Store App</li>
+                        <li>Certificate Refurbished</li>
+                        <li>Apple Trade In</li>
+                        <li>Financing</li>
+                        <li>Carrier Deals at Apple</li>
+                        <li>Order Status</li>
+                        <li>Shopping Help</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-4 columns">
+                <div>
+                    <ul>
+                        <li>For Business</li>
+                        <li>Apple and Business</li>
+                        <li>Shop for Business</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>For Education</li>
+                        <li>Apple and Education</li>
+                        <li>Shop for K-12</li>
+                        <li>Shop for College</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>For Healthcare</li>
+                        <li>Apple in Healthcare</li>
+                        <li>Health on Apple Watch</li>
+                        <li>Health Records on iPhone</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>For Government</li>
+                        <li>Shop For Government</li>
+                        <li>Shop for Veterans and Military</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="column-5 columns">
+                <div>
+                    <ul>
+                        <li>Apple Values</li>
+                        <li>Accessibility</li>
+                        <li>Education</li>
+                        <li>Envivronment</li>
+                        <li>Inclusion and Diversity</li>
+                        <li>Privacy</li>
+                        <li>Racial Equality and Justice</li>
+                        <li>Supplier Responsibility</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>About Apple</li>
+                        <li>Newsroom</li>
+                        <li>Apple Leadership</li>
+                        <li>Career Opportunities</li>
+                        <li>Investor</li>
+                        <li>Ethics & Compliance</li>
+                        <li>Events</li>
+                        <li>Contact Apple</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <p class="p-one">More ways to shop: <span>Find an Apple Store </span>or <span>other retailer</span> near you. Or
+            call 1-800-MY-APPLE</p>
+        <p class="p-two">Copyright © 2024 Apple Inc. All rights reserved.</p>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
