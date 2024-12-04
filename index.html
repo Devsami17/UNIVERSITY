@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-between  ">
+    <!-- <header class="d-flex justify-content-between  ">
 
         <div class="col-lg-2  col-6  d-flex justify-content-end  align-items-center ">
             <img src="assets/Images/favicon3.png" alt="..." height="17px" style="margin-right: 35px;">
@@ -36,11 +36,11 @@
            <a href="#">Sign Up</a>
         </div>
         <div class="col-lg-2 col-6 icons-div  d-flex justify-content-start  align-items-center gap-4">
-             <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA2RJREFUWEftl23I31MYx7+f88NKIe/sgclDWyPyZmnz4m5qHqK8QOSxNrxRo5Y76k5pediSO6FlmilSKIVYydgLllfU1Ex7ENFCUbKxnN9X53+fbv9Hv9/Z7t1t5Xp7rut7Pr/rnOs61w8dZ8ZxxqMTE8j2CtX1SsHlks6TdJakA5L2yd6hELYC22ci2/+ZIduXyn5e0vIWm30kuB/4uoXvSJeRQLbvkL1J0pyCDQ4JbgbeK4jpcR0KZPtG2W92ef4te6NC+FjSbkn789EtVl2vENwrqZr2h5XAh0cCNQBke6HsnZJOy4J7BdcC34zawPbFsj+QtCD7/CxYAvxSCjUIVNdvS7ohC+0WXNFG2PYC2Z9JOrsTa79IVd13VEC2l8r+PIscFiwCvm0rmovgC6nTTiy4ANjXNj759WTIMU4K1uQvnKSqHiwR6yQmxtcFt3Ti4CFgQ4lGL1Bdp5JdlMWWATtKxKZOyjfJfiPHbSOEK0s0+oF+k3RGBjod+L1ELAOdKztVYbLvCGFhiUY/0GFJJ2egk4BYIpaB5sj+M8cdIoRTSzT6gX6UNDcDzQXS81BktufJ/iEH7SSES0oE+oE+lbQsA10DbC0Ryxm6XvY7nTj7Narq9hKNXiB7QvZjWewlquqeErEOQ4yvCm7LHzUOrC/R6AdaLHtXFqhzt01PRSvLfejL7PyX4ELg+1bB2WmwU8f4iuDOvL5HsBz4qUnU9jm5U8/PGV5HVU00xfWvD3vL0qX8StKZ2Xm/4OqGt+wy2e/nOSmFHRCcDxw8aqB8Ma+T/W6XWHrtX1AIn3S99qmBLlFdjwlW93X9twR3A3/MCFCGulX2FkmnFIim/pPuUJosfxVMSnoWSA23lTVNjBfJfk7SWAu1bYJUlSmbe6YbrHRQ8BQwVb0N1mrIzzP1VV0z9TxJQWkzabvgZWB6oHOMGwW9owdMAOtmBKhJpH89V1waO/6dIpMTPNqUqVYZKgXq3MEYHxc8PBBrr6eqxkdpHjsgG9X1JsGqIVBbFMIqoG7sQ0eSjVExtoPqerPgriFQmxXCasDda8csQ92bOMZnBA8MQE39MnX/3czer7Rj3CBYOw1lP0FVPTKrRzZQfTE+KRhPYMDTw456Vo6s5/jsMSA9QUNt1oGaiuZ/oBMuQ/8Ah3xQNE5ojAkAAAAASUVORK5CYII="
+             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA2RJREFUWEftl23I31MYx7+f88NKIe/sgclDWyPyZmnz4m5qHqK8QOSxNrxRo5Y76k5pediSO6FlmilSKIVYydgLllfU1Ex7ENFCUbKxnN9X53+fbv9Hv9/Z7t1t5Xp7rut7Pr/rnOs61w8dZ8ZxxqMTE8j2CtX1SsHlks6TdJakA5L2yd6hELYC22ci2/+ZIduXyn5e0vIWm30kuB/4uoXvSJeRQLbvkL1J0pyCDQ4JbgbeK4jpcR0KZPtG2W92ef4te6NC+FjSbkn789EtVl2vENwrqZr2h5XAh0cCNQBke6HsnZJOy4J7BdcC34zawPbFsj+QtCD7/CxYAvxSCjUIVNdvS7ohC+0WXNFG2PYC2Z9JOrsTa79IVd13VEC2l8r+PIscFiwCvm0rmovgC6nTTiy4ANjXNj759WTIMU4K1uQvnKSqHiwR6yQmxtcFt3Ti4CFgQ4lGL1Bdp5JdlMWWATtKxKZOyjfJfiPHbSOEK0s0+oF+k3RGBjod+L1ELAOdKztVYbLvCGFhiUY/0GFJJ2egk4BYIpaB5sj+M8cdIoRTSzT6gX6UNDcDzQXS81BktufJ/iEH7SSES0oE+oE+lbQsA10DbC0Ryxm6XvY7nTj7Narq9hKNXiB7QvZjWewlquqeErEOQ4yvCm7LHzUOrC/R6AdaLHtXFqhzt01PRSvLfejL7PyX4ELg+1bB2WmwU8f4iuDOvL5HsBz4qUnU9jm5U8/PGV5HVU00xfWvD3vL0qX8StKZ2Xm/4OqGt+wy2e/nOSmFHRCcDxw8aqB8Ma+T/W6XWHrtX1AIn3S99qmBLlFdjwlW93X9twR3A3/MCFCGulX2FkmnFIim/pPuUJosfxVMSnoWSA23lTVNjBfJfk7SWAu1bYJUlSmbe6YbrHRQ8BQwVb0N1mrIzzP1VV0z9TxJQWkzabvgZWB6oHOMGwW9owdMAOtmBKhJpH89V1waO/6dIpMTPNqUqVYZKgXq3MEYHxc8PBBrr6eqxkdpHjsgG9X1JsGqIVBbFMIqoG7sQ0eSjVExtoPqerPgriFQmxXCasDda8csQ92bOMZnBA8MQE39MnX/3czer7Rj3CBYOw1lP0FVPTKrRzZQfTE+KRhPYMDTw456Vo6s5/jsMSA9QUNt1oGaiuZ/oBMuQ/8Ah3xQNE5ojAkAAAAASUVORK5CYII="
                 height="17px" onclick="searchIcon()" />
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAc5JREFUWEftlz1oFUEUhc+3a2NnJQSsxCpBiJViLZYSwdLCIqhgJwr+BE0EDfjTCYohRSobES3FLtjYCSrPRtKEFDZJLcweSRjDw7x9s/OyQgg75dyz935z5u4wg/bYYI/xaP8A2Z5QVV0WTEqaiE5/k/1FRfES+DGK+yM55BAeCGakWoeD4DbwJBcqG8ghPBdca1TInqMsZxtpoygLyPa07IW+AsuCO5K+x7njsh9LOrWtgSngfVOoxkC2S9lrkg5vJbdfqyguAlV/sah7K+lcnO9RFOP/A+iM7I8x8YbgKLA+qJDtMdk/JR3cisM40GsClePQddnPYtJ3FMX5YQVcVR8knY1Al4CltoHuyZ6L2/WIsrw7FCiEecGtCDQDPGwXKIRZwf0IlPx7nKn/C7tjy2wfkf1G0skmK9qF5rPgArDan2MQ0A3Z2QfaSGBwE3g6HKjf6pGqZHw04ODc6VDN3uf2RJ0+lacDas2hjM4YKu2AUk52DnUOpRxIxbse6hxKOZCK74Mesq/KfpFaaStxuAK8St0YN6+wXyUdaqVofZJfghPA5ltvewx8Btk+JntR0mlJB1oG+y3pk2AaWPk3d+N3WctQtek6oJTTfwAE65Y00iOMMwAAAABJRU5ErkJggg=="
                 height="17px" onclick="cartIcon()" /> -->
-            <div> <i class="bx bx-menu-alt-right" onclick="openNav()"></i></div> 
+            <!-- <div> <i class="bx bx-menu-alt-right" onclick="openNav()"></i></div> 
 
 
         </div>
@@ -51,7 +51,7 @@
             <a href="">Contact</a>
             <a href="">Sign Up</a>
 
-        </div>
+        </div> -->
         <!-- <div class="sub-menu d-flex justify-content-center ">
             <div class="col-lg-3">
                 <ul id="first_col">
@@ -109,8 +109,11 @@
         </div> -->
 
 
-    </header>
+    <!-- </header> --> 
     <main>
+        <section class="section-9 ">
+            <img  src="assets/Images/section-9.jpeg" alt="not found">
+        </section>
         <!-- section 1 starts -->
         <section id="section-1"
             class=" container-fluid section-1 ">
@@ -452,367 +455,13 @@ features
         <!-- all section ends -->
     </main>
     <footer>
-        <div class="resp-footer">
-
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Shop and Learn
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Store</a>
-                            <a>Mac</a>
-                            <a>iPad</a>
-                            <a>iPhone</a>
-                            <a>Watch</a>
-                            <a>Vision</a>
-                            <a>AirPods</a>
-                            <a>Tv & Home</a>
-                            <a>AirTag</a>
-                            <a>Accessories</a>
-                            <a>GIft Cards</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Apple Wallet
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Apple Wallet</a>
-                            <a>Wallet</a>
-                            <a>Apple Card</a>
-                            <a>Apple Pay</a>
-                            <a>Apple Cash</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Account
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Manage Your Apple ID</a>
-                            <a>Apple Store Account</a>
-                            <a>iCloud.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Entertainment
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Apple One</a>
-                            <a>Apple Tv+</a>
-                            <a>Apple Music</a>
-                            <a>Apple Arcade</a>
-                            <a>Apple Fitness+</a>
-                            <a>Apple News+</a>
-                            <a>Apple Podcasts</a>
-                            <a>Apple Books</a>
-                            <a>App Store</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Apple Store
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Find a Store</a>
-                            <a>Genius Bar</a>
-                            <a>Today at Apple</a>
-                            <a>Apple Camp</a>
-                            <a>Apple Store App</a>
-                            <a>Certificate Refurbished</a>
-                            <a>Apple Trade In</a>
-                            <a>Financing</a>
-                            <a>Carrier Deals at Apple</a>
-                            <a>Order Status</a>
-                            <a>Shopping Help</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            For Business
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Apple and Business</a>
-                            <a>Shop for Business</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            For Education
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Apple and Education</a>
-                            <a>Shop for K-12</a>
-                            <a>Shop for College</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            For Healthcare
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body"><a>Apple in Healthcare</a>
-                            <a>Health on Apple Watch</a>
-                            <a>Health Records on iPhone</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            For Government
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Shop For Government</a>
-                            <a>Shop for Veterans and Military</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Apple Values
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Accessibility</a>
-                            <a>Education</a>
-                            <a>Envivronment</a>
-                            <a>Inclusion and Diversity</a>
-                            <a>Privacy</a>
-                            <a>Racial Equality and Justice</a>
-                            <a>Supplier Responsibility</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            About Apple
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <a>Newsroom</a>
-                            <a>Apple Leadership</a>
-                            <a>Career Opportunities</a>
-                            <a>Investor</a>
-                            <a>Ethics & Compaliance</a>
-                            <a>Events</a>
-                            <a>Contact Apple</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-        <div class="footer-main-contents">
-            <div class="column-1 columns">
-                <div>
-                    <ul>
-                        <li>Shop and Learn</li>
-                        <li>Store</li>
-                        <li>Mac</li>
-                        <li>iPad</li>
-                        <li>iPhone</li>
-                        <li>Watch</li>
-                        <li>Vision</li>
-                        <li>AirPods</li>
-                        <li>Tv & Home</li>
-                        <li>AirTag</li>
-                        <li>Accessories</li>
-                        <li>GIft Cards</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <ul>
-                        <li>Apple Wallet</li>
-                        <li>Wallet</li>
-                        <li>Apple Card</li>
-                        <li>Apple Pay</li>
-                        <li>Apple Cash</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="column-2 columns">
-                <div>
-                    <ul>
-                        <li>Account</li>
-                        <li>Manage Your Apple ID</li>
-                        <li>Apple Store Account</li>
-                        <li>iCloud.com</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <ul>
-                        <li>Entertainment</li>
-                        <li>Apple One</li>
-                        <li>Apple Tv+</li>
-                        <li>Apple Music</li>
-                        <li>Apple Arcade</li>
-                        <li>Apple Fitness+</li>
-                        <li>Apple News+</li>
-                        <li>Apple Podcasts</li>
-                        <li>Apple Books</li>
-                        <li>App Store</li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="column-3 columns">
-                <div>
-                    <ul>
-                        <li>Apple Store</li>
-                        <li>Find a Store</li>
-                        <li>Genius Bar</li>
-                        <li>Today at Apple</li>
-                        <li>Apple Camp</li>
-                        <li>Apple Store App</li>
-                        <li>Certificate Refurbished</li>
-                        <li>Apple Trade In</li>
-                        <li>Financing</li>
-                        <li>Carrier Deals at Apple</li>
-                        <li>Order Status</li>
-                        <li>Shopping Help</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="column-4 columns">
-                <div>
-                    <ul>
-                        <li>For Business</li>
-                        <li>Apple and Business</li>
-                        <li>Shop for Business</li>
-
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>For Education</li>
-                        <li>Apple and Education</li>
-                        <li>Shop for K-12</li>
-                        <li>Shop for College</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>For Healthcare</li>
-                        <li>Apple in Healthcare</li>
-                        <li>Health on Apple Watch</li>
-                        <li>Health Records on iPhone</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>For Government</li>
-                        <li>Shop For Government</li>
-                        <li>Shop for Veterans and Military</li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-            <div class="column-5 columns">
-                <div>
-                    <ul>
-                        <li>Apple Values</li>
-                        <li>Accessibility</li>
-                        <li>Education</li>
-                        <li>Envivronment</li>
-                        <li>Inclusion and Diversity</li>
-                        <li>Privacy</li>
-                        <li>Racial Equality and Justice</li>
-                        <li>Supplier Responsibility</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <ul>
-                        <li>About Apple</li>
-                        <li>Newsroom</li>
-                        <li>Apple Leadership</li>
-                        <li>Career Opportunities</li>
-                        <li>Investor</li>
-                        <li>Ethics & Compliance</li>
-                        <li>Events</li>
-                        <li>Contact Apple</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-
-        <p class="p-one">More ways to shop: <span>Find an Apple Store </span>or <span>other retailer</span> near you. Or
-            call 1-800-MY-APPLE</p>
-        <p class="p-two">Copyright © 2024 Apple Inc. All rights reserved.</p>
+<div class="part-1">
+    <h2>University</h2>
+    <p>Stay connected with University—where learning meets excellence. Discover our programs, campus life, and research opportunities to shape your future. Contact us anytime for admissions, inquiries, or support—we’re here for you!</p>
+</div>
+<div class="part-2">
+    <p>Copyright 2024 University</p>
+</div>
     </footer>
 
     <!-- scripts -->

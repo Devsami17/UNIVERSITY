@@ -187,7 +187,9 @@ header a:hover {
     padding-bottom: 120px;
 background-color: var(--primary);
 }
-
+section{
+    background-color: #fff !important;
+}
 .section-2 h1 {
     font-family: 'myFont4';
     color: var(--sec);
@@ -296,84 +298,6 @@ header div:nth-child(3) i {
 
 /* footer section starts */
 
-footer {
-
-    padding: 0 22px;
-    background-color: rgb(245, 245, 247);
-    height: 100vh;
-    /* margin-top: -115px; */
-}
-
-footer ul {
-    padding-top: 60px;
-    padding-left: 100px;
-}
-
-footer li {
-    color: rgba(0, 0, 0, 0.72);
-    list-style: none;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-footer li:nth-child(1) {
-    color: var(--prim);
-    list-style: none;
-    font-size: 12px;
-    font-family: 'myFont5';
-    padding-bottom: 3px;
-}
-
-.columns div:nth-child(2) ul {
-    padding-top: 0px;
-    padding-left: 100px;
-}
-
-.column-4 div:nth-child(3) ul,
-.column-4 div:nth-child(4) ul {
-    padding-top: 0px;
-    padding-left: 100px;
-}
-
-footer li:not(:nth-child(1)):hover {
-    text-decoration: underline;
-    transition: color 0.3s ease;
-    cursor: pointer;
-}
-
-.footer-main-contents {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.resp-footer {
-    display: none;
-}
-
-.p-two {
-    padding-left: 100px;
-
-
-    font-size: 12px;
-    width: 100%;
-    color: rgba(0, 0, 0, 0.72);
-
-}
-
-.p-one {
-    padding-left: 100px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    font-size: 12px;
-    width: 100%;
-    color: rgba(0, 0, 0, 0.72);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
-}
-
-footer span {
-    color: #06c !important;
-    text-decoration: underline !important;
-}
 
 /* sub menu  */
 
@@ -575,6 +499,13 @@ display: flex;
 /* responsive work start */
 
 @media screen and (max-width:600px) {
+    footer p {
+        width: 95% !important;
+    }
+.section-9 img {
+    height: auto !important;
+    object-fit: contain !important;
+}
     .section-7 h2{
         font-size: 32px !important;
     }
@@ -838,7 +769,7 @@ display: flex;
     }
 
     .accordion-body {
-        background-color: rgb(245, 245, 247) !important;
+        background-color: #fff !important;
         display: flex;
         flex-direction: column;
 
@@ -895,7 +826,7 @@ display: flex;
 .section-2 .Contracts-for-students h3{
     font-family: "myFont4";
     font-size: 24px;
-    color: #fff;
+    color: #000;
 }
 .section-3 .part-2{
     width: 60%;
@@ -904,6 +835,7 @@ display: flex;
     /* font-family: "myFont4"; */
     font-size: 16px;
     margin-top: 30px;
+    color: #000 !important;
     /* list-style: none; */
 }
 .timeline {
@@ -976,7 +908,7 @@ padding-left: 20px;
  }
  .section-4 .accordion-item {
     margin-bottom: 20px;
-    background-color: var(--secondary);
+    background-color:#fff;
     border: none;
   }
 
@@ -1098,6 +1030,18 @@ margin-top: 14px;
     background-color: rgb(245, 245, 247) !important;
     background-image: url(assets/Images/banner-1.jpg);
 }
+.section-9{
+
+/* height: 800px; */
+   
+/* height:100vh; */
+
+}
+.section-9 img{
+width: 100%;
+object-fit: fill;
+height: 100%;
+}
 .section-8 .middle-box{
     border-radius: 18px;
     border: 1px solid #fff;
@@ -1118,4 +1062,34 @@ margin-top: 14px;
     color: var(--primary);
     /* border: 2px solid var(--primary); */
     transition: all .2s ease-in-out;
+}
+.section-2 h2{
+    color: #000 !important;
+}
+footer{
+    text-align: center;
+    padding-top: 40px;
+}
+footer h2{
+    font-weight: 600;
+    font-size: 48px;
+    letter-spacing: -.002em;
+    font-family: 'myFont5' !important;
+}
+footer p{
+    font-size: 14px;
+    width: 50%;
+    margin: 0 auto;
+    
+
+}
+footer .part-2{
+    margin-top: 20px;
+    border-top: 1px solid #d8d8d8;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+footer .part-2 p{
+    text-decoration: underline;
+    color: #212529;
 }
