@@ -3,15 +3,11 @@
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
 
-}
-html{
-    scroll-behavior: smooth;
-}
 body {
     color: var(--sec);
     font-family: 'myFont3' !important;
-    overflow-x: hidden;
 }
 
 
@@ -1076,7 +1072,12 @@ margin-top: 14px;
 .section-8 .middle-box table tbody tr:nth-child(odd){
     background-color: #00000038;
 }
-
+.section-1 .btn-group button:nth-child(1):hover{
+    background-color: #fff;
+    color: var(--primary);
+    /* border: 2px solid var(--primary); */
+    transition: all .2s ease-in-out;
+}
 .section-2 h2{
     color: #000 !important;
 }
@@ -1106,67 +1107,4 @@ footer .part-2{
 footer .part-2 p{
     text-decoration: underline;
     color: #212529;
-}
-.btn3d {
-    position: relative;
-    top: -6px;
-    border: 0;
-    transition: all 40ms linear;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
-    width: 200px;
-    height: 50px;
-
-}
-  .btn3d span{
-    margin-left: 0px;
-
-  }
-  .btn3d:active:focus,
-  .btn3d:focus:hover,
-  .btn3d:focus {
-    -moz-outline-style: none;
-    outline: medium none;
-  }
-  
-  .btn3d:active,
-  .btn3d.active {
-    top: 2px;
-  }
-  .btn3d.btn-s {
-    box-shadow: 0 0 0 1px rgb(111, 132, 247) inset, 
-                0 0 0 2px rgba(255, 255, 255, 0.15) inset, 
-                0 8px 0 0 rgb(89, 107, 200), 
-                0 8px 8px 1px rgba(0, 0, 0, 0.5);
-    background-color: rgb(111, 132, 247);
-}
-
-.btn3d.btn-s:active,
-.btn3d.btn-s.active {
-    box-shadow: 0 0 0 1px rgb(99, 119, 220) inset, 
-                0 0 0 1px rgba(255, 255, 255, 0.15) inset, 
-                0 1px 3px 1px rgba(0, 0, 0, 0.3);
-    background-color: rgb(111, 132, 247);
-}
-
-
-.btn3d.btn-l {
-    color: var(--primary) !important;
-    box-shadow: 0 0 0 1px rgb(111, 132, 247) inset, 
-                0 0 0 2px rgba(255, 255, 255, 0.15) inset, 
-                0 8px 0 0 rgb(89, 107, 200), 
-                0 8px 8px 1px rgba(0, 0, 0, 0.5);
-    background-color: transparent;
-    border: 2px solid rgb(111, 132, 247); /* Border matches the blue shade */
-}
-
-.btn3d.btn-l:active,
-.btn3d.btn-l.active {
-    box-shadow: 0 0 0 1px rgb(99, 119, 220) inset, 
-                0 0 0 1px rgba(255, 255, 255, 0.15) inset, 
-                0 1px 3px 1px rgba(0, 0, 0, 0.3);
-    background-color: rgba(111, 132, 247, 0.2); /* Slight blue tint when active */
-    border-color: rgb(99, 119, 220); /* Darker border when active */
 }
