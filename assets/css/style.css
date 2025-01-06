@@ -983,6 +983,7 @@ padding-left: 20px;
   #video-background {
     object-fit: cover;
     width: 100%;
+    border-radius: 16px;
     height: 100%;
   }
   
