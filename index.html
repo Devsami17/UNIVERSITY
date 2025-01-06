@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link
@@ -39,7 +39,7 @@
            <a href="#">Home</a>
            <a href="#">About</a>
            <a href="#">Contact</a>
-           <a href="#">Sign Up</a>
+           <a href="register.html">Sign Up</a>
         </div>
         <div class="col-lg-2 col-6 icons-div  d-flex justify-content-start  align-items-center gap-4">
              <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA2RJREFUWEftl23I31MYx7+f88NKIe/sgclDWyPyZmnz4m5qHqK8QOSxNrxRo5Y76k5pediSO6FlmilSKIVYydgLllfU1Ex7ENFCUbKxnN9X53+fbv9Hv9/Z7t1t5Xp7rut7Pr/rnOs61w8dZ8ZxxqMTE8j2CtX1SsHlks6TdJakA5L2yd6hELYC22ci2/+ZIduXyn5e0vIWm30kuB/4uoXvSJeRQLbvkL1J0pyCDQ4JbgbeK4jpcR0KZPtG2W92ef4te6NC+FjSbkn789EtVl2vENwrqZr2h5XAh0cCNQBke6HsnZJOy4J7BdcC34zawPbFsj+QtCD7/CxYAvxSCjUIVNdvS7ohC+0WXNFG2PYC2Z9JOrsTa79IVd13VEC2l8r+PIscFiwCvm0rmovgC6nTTiy4ANjXNj759WTIMU4K1uQvnKSqHiwR6yQmxtcFt3Ti4CFgQ4lGL1Bdp5JdlMWWATtKxKZOyjfJfiPHbSOEK0s0+oF+k3RGBjod+L1ELAOdKztVYbLvCGFhiUY/0GFJJ2egk4BYIpaB5sj+M8cdIoRTSzT6gX6UNDcDzQXS81BktufJ/iEH7SSES0oE+oE+lbQsA10DbC0Ryxm6XvY7nTj7Narq9hKNXiB7QvZjWewlquqeErEOQ4yvCm7LHzUOrC/R6AdaLHtXFqhzt01PRSvLfejL7PyX4ELg+1bB2WmwU8f4iuDOvL5HsBz4qUnU9jm5U8/PGV5HVU00xfWvD3vL0qX8StKZ2Xm/4OqGt+wy2e/nOSmFHRCcDxw8aqB8Ma+T/W6XWHrtX1AIn3S99qmBLlFdjwlW93X9twR3A3/MCFCGulX2FkmnFIim/pPuUJosfxVMSnoWSA23lTVNjBfJfk7SWAu1bYJUlSmbe6YbrHRQ8BQwVb0N1mrIzzP1VV0z9TxJQWkzabvgZWB6oHOMGwW9owdMAOtmBKhJpH89V1waO/6dIpMTPNqUqVYZKgXq3MEYHxc8PBBrr6eqxkdpHjsgG9X1JsGqIVBbFMIqoG7sQ0eSjVExtoPqerPgriFQmxXCasDda8csQ92bOMZnBA8MQE39MnX/3czer7Rj3CBYOw1lP0FVPTKrRzZQfTE+KRhPYMDTw456Vo6s5/jsMSA9QUNt1oGaiuZ/oBMuQ/8Ah3xQNE5ojAkAAAAASUVORK5CYII="
@@ -55,7 +55,7 @@
             <a href="">Home</a>
             <a href="">About</a>
             <a href="">Contact</a>
-            <a href="">Sign Up</a>
+            <a href="register.html">Sign Up</a>
 
         </div> 
         <!-- <div class="sub-menu d-flex justify-content-center ">
@@ -118,6 +118,7 @@
      </header> 
     <main>
 
+        
         <!-- section 1 starts -->
         <section id="section-1"
             class=" container-fluid section-1 ">
@@ -127,7 +128,7 @@
                 </h2>
                 <p>Discover a platform that simplifies, enriches and supports your student life - from exclusive offers to personal development.</p>
           <div class="btn-group">
-            <button type="button" class=" btn-s  btn3d"><span class="glyphicon glyphicon-ok"></span> Register Now</button>
+            <button type="button" onclick="window.location='register.html'" class=" btn-s  btn3d"><span class="glyphicon glyphicon-ok"></span> Register Now</button>
             <button type="button" class=" btn-l  btn3d"><span class="glyphicon glyphicon-ok"></span> Learn More</button>
           </div>
           
@@ -258,11 +259,12 @@
 
         <!-- sec-5-starts -->
         <section class="container-fluid section-5 d-flex ">
+            
       <div class="container">
         <h2 >Personal Development through Workshops and 
             Events</h2>
-            <div class="parent-box">
-                <div class="boxes wow animate__animated animate__slideInUp">
+            <div class="parent-box mb-2 mt-5">
+                <div class="boxes ">
                     <h4>Career Development</h4>
                     <p>Boost your career prospects with our practical workshops. 
                         Learn how to write compelling applications, present
@@ -270,7 +272,7 @@
                         Benefit from the experiences of successful professionals 
                         and prepare optimally for your career start.</p>
                 </div>
-                <div class="boxes wow animate__animated animate__slideInUp">
+                <div class="boxes ">
                     <h4>Mindset and Stress Management</h4>
                     <p>Master the challenges of your studies with our workshops 
                         on resilience, relaxation techniques, and time 
@@ -278,7 +280,16 @@
                         stressful exam periods and care for your mental health.
                         </p>
                 </div>
-                <div class="boxes wow animate__animated animate__slideInUp">
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop id="video-background">
+                      <source src="assets/Images/workshop.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+              
+                <div class="parent-box">
+                <div class="boxes ">
                     <h4>Financial Education
                     </h4>
                     <p>Become a finance pro with our training on budgeting, tax 
@@ -287,16 +298,17 @@
                         for a secure financial future during your studies.
                         </p>
                 </div>
-                <div class="boxes wow animate__animated animate__slideInUp">
+                <div class="boxes ">
                     <h4>Networking Events</h4>
                     <p>Make valuable contacts at our exclusive meetings with 
                         industry experts, alumni, and potential employers. Expand 
                         your professional network and discover exciting career 
                         opportunities in a relaxed atmosphere.</p>
                 </div>
+                </div>
             </div>
       </div>
-
+  
         </section>
         <!-- sec - 5 -end  -->
 
